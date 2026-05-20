@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+npm-debug.log*
+coverage/
+.nyc_output/
+.env
+.env.*
+!.env.example
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/.terraform.lock.hcl
+terraform/terraform.tfvars
+terraform/crash.log
+terraform/override.tf
+terraform/override.tf.json
+
+# k6
+k6-summary.json
+k6/results/
+
+# Editores / Sistemas
+.DS_Store
+.vscode/
+.idea/
+*.iml
+*.swp
+
+# Llaves y secretos
+*.pem
+*.ppk
+*.key
+secrets/
