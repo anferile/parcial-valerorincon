@@ -33,3 +33,5 @@ k6/results/
 *.ppk
 *.key
 secrets/
+
+terraform/plan.out

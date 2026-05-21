@@ -26,12 +26,12 @@ resource "aws_db_instance" "main" {
   vpc_security_group_ids = [aws_security_group.rds.id]
   publicly_accessible    = false
 
-  multi_az                    = false
-  backup_retention_period     = 1
-  skip_final_snapshot         = true
-  deletion_protection         = false
-  apply_immediately           = true
-  auto_minor_version_upgrade  = true
+  multi_az                     = false
+  backup_retention_period      = 1
+  skip_final_snapshot          = true
+  deletion_protection          = false
+  apply_immediately            = true
+  auto_minor_version_upgrade   = true
   performance_insights_enabled = false
 
   tags = merge(local.common_tags, {
