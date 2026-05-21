@@ -73,7 +73,7 @@ variable "app_port" {
 variable "app_repo_url" {
   description = "URL publica del repositorio Git que sera clonado por cada EC2."
   type        = string
-  default     = "https://github.com/anferile/parcial-valero-rincon.git"
+  default     = "https://github.com/anferile/parcial-valerorincon.git"
 }
 
 variable "app_repo_branch" {

@@ -43,10 +43,10 @@ output "rds_endpoint" {
   value       = aws_db_instance.main.address
 }
 
-output "rds_replica_endpoint" {
+/* output "rds_replica_endpoint" {
   description = "Endpoint de la read replica."
   value       = var.create_read_replica ? aws_db_instance.replica[0].address : "no-replica-created"
-}
+} */
 
 output "security_group_alb_id" {
   description = "ID del Security Group del ALB."
@@ -77,7 +77,7 @@ output "deploy_summary" {
   Productos        : http://${aws_lb.app.dns_name}/api/products
 
   RDS Primary      : ${aws_db_instance.main.address}:3306
-  RDS Replica      : ${var.create_read_replica ? aws_db_instance.replica[0].address : "no-replica"}
+  RDS Replica      : no-replica
 
   EC2 nodes        : ${join(", ", aws_instance.app[*].public_ip)}
   Target Group     : ${aws_lb_target_group.app.name}

@@ -29,7 +29,7 @@ DB_PORT=${db_port}
 DB_NAME=${db_name}
 DB_USER=${db_user}
 DB_PASSWORD=${db_password}
-DB_SSL=true
+DB_SSL=false
 DB_POOL_MAX=10
 INSTANCE_TAG=$${INSTANCE_TAG}
 EOF

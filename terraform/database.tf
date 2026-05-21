@@ -8,7 +8,7 @@ resource "aws_db_subnet_group" "main" {
   })
 }
 
-resource "aws_db_instance" "main" {
+ resource "aws_db_instance" "main" {
   identifier        = "${local.name_prefix}-rds"
   engine            = "mysql"
   engine_version    = var.db_engine_version
@@ -40,7 +40,7 @@ resource "aws_db_instance" "main" {
   })
 }
 
-resource "aws_db_instance" "replica" {
+/*resource "aws_db_instance" "replica" {
   count = var.create_read_replica ? 1 : 0
 
   identifier             = "${local.name_prefix}-rds-replica"
@@ -59,3 +59,4 @@ resource "aws_db_instance" "replica" {
 
   depends_on = [aws_db_instance.main]
 }
+*/
