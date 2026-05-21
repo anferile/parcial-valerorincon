@@ -15,9 +15,9 @@ apt-get install -y nodejs
 
 APP_DIR="/opt/parcial-valero"
 mkdir -p "$${APP_DIR}"
-git clone --branch "${repo_branch}" "${repo_url}" "$${APP_DIR}/repo" || \
-  (cd "$${APP_DIR}/repo" && git pull)
+rm -rf "$${APP_DIR}/repo"
 
+git clone --branch "${repo_branch}" "${repo_url}" "$${APP_DIR}/repo"
 cd "$${APP_DIR}/repo/${app_subdir}"
 npm install --omit=dev
 
